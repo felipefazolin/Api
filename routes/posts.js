@@ -2,7 +2,7 @@ const express = require ('express');
 const router = express.Router();
 //criando posts no db
 const Post = require('../models/Post');
-
+const path = require('path');
 /*
 router.get('/', (req,res) => {
     res.send('We are on posts');
@@ -11,6 +11,17 @@ router.get('/', (req,res) => {
 
 
 
+router.get('/', (req,res) => {
+
+    res.sendFile(path.join(__dirname+'/index.html'));
+    
+});
+
+
+
+
+
+/*
 router.get('/', async (req,res) => {
  
     try{
@@ -21,7 +32,7 @@ router.get('/', async (req,res) => {
     }    
     
 });
-
+*/
 
 
 /*
